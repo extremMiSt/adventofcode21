@@ -12,6 +12,7 @@ public class Main01 {
     
     int depth = 0;
     int pos = 0;
+    System.out.println("pos: " + pos + ", depth: " + depth);
     
     while(scn.hasNextLine()){
       String line  = scn.nextLine();
@@ -26,9 +27,9 @@ public class Main01 {
       }else{
         System.exit(-1);
       }
+      System.out.println("pos: " + pos + ", depth: " + depth);
     } 
     
-    System.out.println("we are at " + pos + " at depth " + depth);
     System.out.println("multiplied: " + (pos*depth));
   }
 
