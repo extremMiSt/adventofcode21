@@ -23,7 +23,6 @@ public class Main02 {
     System.out.println("generator: 0b"+ gen + ", scrubber: 0b" + scrub);
     System.out.println("generator: "+ Integer.parseInt(gen, 2) + ", scrubber: " + Integer.parseInt(scrub, 2));
     System.out.println("life support: " + Integer.parseInt(gen, 2) * Integer.parseInt(scrub, 2));
-    
   }
   
   public static int count(ArrayList<String> in, int i){
