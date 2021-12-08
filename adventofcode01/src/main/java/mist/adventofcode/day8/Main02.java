@@ -11,6 +11,11 @@ import static java.util.Map.entry;
 
 public class Main02 {
   
+  /*
+  this is the number of times the signals of the matching number should appear in
+  the inputs.
+  yes, suprisingly, this is distinct for all the numbers.
+  */
   private static final Map<Integer, String> MAP = Map.ofEntries(entry(42, "0"), 
       entry(17, "1"), entry(34, "2"), entry(39, "3"), entry(30, "4"), 
       entry(37, "5"), entry(41, "6"), entry(25, "7"), entry(49, "8"), 
