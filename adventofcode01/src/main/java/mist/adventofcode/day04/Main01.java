@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Main01 {
   
   public static void main(String[] args) throws IOException{
-    InputStream r = mist.adventofcode.day03.Main01.class.getClassLoader().getResourceAsStream("day4/input01.txt");
+    InputStream r = Main01.class.getClassLoader().getResourceAsStream("day04/input01.txt");
     Scanner scn = new Scanner(r);
     
     String inString = scn.nextLine();

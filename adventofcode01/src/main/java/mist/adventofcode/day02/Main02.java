@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main02 {
 
   public static void main(String[] args) throws IOException{
-    InputStream r = Main02.class.getClassLoader().getResourceAsStream("day2/input01.txt");
+    InputStream r = Main02.class.getClassLoader().getResourceAsStream("day02/input01.txt");
     Scanner scn = new Scanner(r);
     
     int depth = 0;

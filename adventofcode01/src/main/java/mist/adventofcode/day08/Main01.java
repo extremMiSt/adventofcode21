@@ -3,16 +3,13 @@ package mist.adventofcode.day08;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Main01 {
   
   public static void main(String[] args) throws IOException{
-    InputStream r = mist.adventofcode.day03.Main01.class.getClassLoader().getResourceAsStream("day8/input01.txt");
+    InputStream r = Main01.class.getClassLoader().getResourceAsStream("day08/input01.txt");
     Scanner scn = new Scanner(r);
     
     List<String[]> input = new ArrayList<>();

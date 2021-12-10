@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Main02 {
   
   public static void main(String[] args) throws IOException{
-    InputStream r = mist.adventofcode.day03.Main01.class.getClassLoader().getResourceAsStream("day7/input01.txt");
+    InputStream r = Main01.class.getClassLoader().getResourceAsStream("day07/input01.txt");
     Scanner scn = new Scanner(r);
     
     String[] crabRaw = scn.nextLine().split(",");

@@ -9,8 +9,8 @@ import java.util.Scanner;
 public class Main02 {
   
   public static void main(String[] args) throws IOException{
-    InputStream r = mist.adventofcode.day03.Main01.class.getClassLoader().getResourceAsStream("day5/input01.txt");
-    //InputStream r = mist.adventofcode.day3.Main01.class.getClassLoader().getResourceAsStream("day5/example.txt");
+    InputStream r = Main01.class.getClassLoader().getResourceAsStream("day05/input01.txt");
+    //InputStream r = Main01.class.getClassLoader().getResourceAsStream("day05/example.txt");
     Scanner scn = new Scanner(r);
     
     List<Line> lines = new ArrayList<>();
