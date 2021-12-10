@@ -1,4 +1,4 @@
-package mist.adventofcode.day9;
+package mist.adventofcode.day09;
 
 public class Point {
   

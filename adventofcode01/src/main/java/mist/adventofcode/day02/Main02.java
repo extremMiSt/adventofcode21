@@ -1,4 +1,4 @@
-package mist.adventofcode.day2;
+package mist.adventofcode.day02;
 
 import java.io.IOException;
 import java.io.InputStream;

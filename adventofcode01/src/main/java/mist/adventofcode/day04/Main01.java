@@ -1,4 +1,4 @@
-package mist.adventofcode.day4;
+package mist.adventofcode.day04;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main02 {
+public class Main01 {
   
   public static void main(String[] args) throws IOException{
-    InputStream r = mist.adventofcode.day3.Main01.class.getClassLoader().getResourceAsStream("day4/input01.txt");
+    InputStream r = mist.adventofcode.day03.Main01.class.getClassLoader().getResourceAsStream("day4/input01.txt");
     Scanner scn = new Scanner(r);
     
     String inString = scn.nextLine();
@@ -34,14 +34,7 @@ public class Main02 {
     
     for (String input : inputs) {
       for (BingoBoard board : boards) {
-        board.mark(input);
-        
-        boolean last = true;
-        for (BingoBoard board1 : boards) {
-          last = last && board1.check();
-        }
-        
-        if(last){
+        if(board.mark(input)){
           System.out.println(board.value() * Integer.parseInt(input));
           System.exit(0);
         }

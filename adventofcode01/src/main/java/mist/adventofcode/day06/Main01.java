@@ -1,4 +1,4 @@
-package mist.adventofcode.day6;
+package mist.adventofcode.day06;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Main01 {
   
   public static void main(String[] args) throws IOException{
-    InputStream r = mist.adventofcode.day3.Main01.class.getClassLoader().getResourceAsStream("day6/input01.txt");
+    InputStream r = mist.adventofcode.day03.Main01.class.getClassLoader().getResourceAsStream("day6/input01.txt");
     Scanner scn = new Scanner(r);
     String[] squidsRaw = scn.nextLine().split(",");
     int[] squidsAge = new int[9];

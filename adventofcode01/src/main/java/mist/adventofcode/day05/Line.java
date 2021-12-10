@@ -1,4 +1,4 @@
-package mist.adventofcode.day5;
+package mist.adventofcode.day05;
 
 public class Line {
   

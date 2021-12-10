@@ -1,4 +1,4 @@
-package mist.adventofcode.day4;
+package mist.adventofcode.day04;
 
 public class BingoBoard {
   

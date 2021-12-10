@@ -1,4 +1,4 @@
-package mist.adventofcode.day9;
+package mist.adventofcode.day09;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main01 {
   
   public static void main(String[] args) throws IOException{
-    InputStream r = mist.adventofcode.day3.Main01.class.getClassLoader().getResourceAsStream("day9/input01.txt");
+    InputStream r = mist.adventofcode.day03.Main01.class.getClassLoader().getResourceAsStream("day9/input01.txt");
     Scanner scn = new Scanner(r);
     
     int[][] floor = new int[100][100];

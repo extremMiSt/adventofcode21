@@ -1,6 +1,5 @@
-package mist.adventofcode.day8;
+package mist.adventofcode.day08;
 
-import mist.adventofcode.day7.*;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -13,7 +12,7 @@ import java.util.Scanner;
 public class Main01 {
   
   public static void main(String[] args) throws IOException{
-    InputStream r = mist.adventofcode.day3.Main01.class.getClassLoader().getResourceAsStream("day8/input01.txt");
+    InputStream r = mist.adventofcode.day03.Main01.class.getClassLoader().getResourceAsStream("day8/input01.txt");
     Scanner scn = new Scanner(r);
     
     List<String[]> input = new ArrayList<>();

@@ -1,4 +1,4 @@
-package mist.adventofcode.day8;
+package mist.adventofcode.day08;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,7 +24,7 @@ public class Main02 {
   private static final char[] SIGNAL = new char[]{'a','b','c','d','e', 'f', 'g'};
   
   public static void main(String[] args) throws IOException{
-    InputStream r = mist.adventofcode.day3.Main01.class.getClassLoader().getResourceAsStream("day8/input01.txt");
+    InputStream r = mist.adventofcode.day03.Main01.class.getClassLoader().getResourceAsStream("day8/input01.txt");
     Scanner scn = new Scanner(r);
     
     List<String> inputs = new ArrayList<>();

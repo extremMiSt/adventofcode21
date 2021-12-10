@@ -1,4 +1,4 @@
-package mist.adventofcode.day7;
+package mist.adventofcode.day07;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -6,18 +6,18 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Main02 {
+public class Main01 {
   
   public static void main(String[] args) throws IOException{
-    InputStream r = mist.adventofcode.day3.Main01.class.getClassLoader().getResourceAsStream("day7/input01.txt");
+    InputStream r = mist.adventofcode.day03.Main01.class.getClassLoader().getResourceAsStream("day7/input01.txt");
     Scanner scn = new Scanner(r);
     
     String[] crabRaw = scn.nextLine().split(",");
     
     Map<Integer,Integer> crabs = new HashMap<>();
-    Integer maxCrab = 0;
+    int maxCrab = 0;
     for (String crab : crabRaw) {
-      Integer crabi = Integer.parseInt(crab);
+      int crabi = Integer.parseInt(crab);
       
       if(crabs.containsKey(crabi)){
         crabs.put(crabi, crabs.get(crabi)+1);
@@ -30,12 +30,11 @@ public class Main02 {
       }
     }
     
-    Integer minfuel = Integer.MAX_VALUE;
+    int minfuel = Integer.MAX_VALUE;
     for (int i = 0; i <= maxCrab; i++) {
-      Integer fuel = 0;
+      int fuel = 0;
       for (Map.Entry<Integer, Integer> entry : crabs.entrySet()) {
-        Integer dist = Math.abs(i - entry.getKey());
-        fuel += (dist * (dist+1))/2  * entry.getValue();
+        fuel += Math.abs(i - entry.getKey())*entry.getValue();
       }
       if(fuel < minfuel){
         minfuel = fuel;
@@ -43,6 +42,7 @@ public class Main02 {
     }
     
     System.out.println(minfuel);
+    
   }
   
 }
