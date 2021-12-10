@@ -20,7 +20,6 @@ public class Main02 {
       long score = lineScore(scn.nextLine());
       if(score != -1){
         l.add(score);
-        System.out.println(score);
       }
     }
     Collections.sort(l);
