@@ -17,7 +17,6 @@ public class Main02 {
     while(scn.hasNextLine()){
       numbers.add(SnailNumber.fromString(scn.nextLine()));
     }
-    System.out.println(numbers);
     
     long max = 0;
     for (SnailNumber number0 : numbers) {
