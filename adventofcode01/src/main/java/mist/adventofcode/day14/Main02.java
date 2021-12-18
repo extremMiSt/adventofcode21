@@ -24,50 +24,50 @@ public class Main02 {
       String[] split = scn.nextLine().split(" -> ");
       substs.put(split[0], split[1]);
     }
-    System.out.println("Template: " + template);
-
-    Map<Character, Integer> counts = new HashMap<>();
+    
+    Map<String, Long> duplets = new HashMap<>();
     for (int i = 0; i < template.length()-1; i++) {
-       merge(counts, insert(template.charAt(i), template.charAt(i+1), substs, 0));
+      add(duplets, template.substring(i,i+2), 1);
     }
     
-    List<Map.Entry<Character,Integer>> list = new ArrayList<>(counts.entrySet());
+    for (int i = 0; i < 40; i++) {
+      Map<String, Long> duplets2 = new HashMap<>();
+      for (String string : duplets.keySet()) {
+        String middle = substs.get(string);
+        add(duplets2, string.charAt(0)+middle, duplets.get(string));
+        add(duplets2, middle+string.charAt(1), duplets.get(string));
+      }
+      duplets = duplets2;
+    }
     
-    Collections.sort(list, new Comparator<Map.Entry<Character, Integer>>(){
+    Map<Character,Long> counts = new HashMap<>();
+    add(counts, template.charAt(0), 1);
+    for (String string : duplets.keySet()) {
+      add(counts, string.charAt(1), duplets.get(string));
+    }
+    
+    
+    List<Map.Entry<Character,Long>> list = new ArrayList<>(counts.entrySet());
+    
+    Collections.sort(list, new Comparator<Map.Entry<Character, Long>>(){
       @Override
-      public int compare(Map.Entry<Character, Integer> o1, Map.Entry<Character, Integer> o2) {
-        return o2.getValue() - o1.getValue();
+      public int compare(Map.Entry<Character, Long> o1, Map.Entry<Character, Long> o2) {
+        long diff = o2.getValue() - o1.getValue();
+        return  diff > 0 ? 1 :(diff < 0 ? -1: 0);
       }
     });
     System.out.println(list.get(0).getValue() - list.get(list.size()-1).getValue());
+    
   }
   
-  public static Map<Character, Integer> insert(char a, char b, Map<String, String> substs, int depth){
-    
-    Map<Character, Integer> counts = new HashMap<>();
-    char middle = substs.get(b+""+a).charAt(0);
-    counts.put(middle, 1);
-    
-    if(depth == 10){
-      return counts;
+  public static <T> void add(Map<T, Long> counters, T key, long count){
+    if(counters.containsKey(key)){
+      counters.put(key, counters.get(key)+count);
+    }else{
+      counters.put(key, count);
     }
-    
-    counts = merge(counts, insert(a, middle, substs, depth+1));
-    counts = merge(counts, insert(middle, b, substs, depth+1));
-    
-    return counts;
   }
   
-  public static <T> Map<T,Integer> merge(Map<T,Integer> m1, Map<T,Integer> m2){
-    HashMap<T, Integer> counts = new HashMap<>(m1);
-    for (Map.Entry<T, Integer> entry : m2.entrySet()) {
-      if(counts.containsKey(entry.getKey())){
-        counts.put(entry.getKey(), entry.getValue()+counts.get(entry.getKey()));
-      }else{
-        counts.put(entry.getKey(), entry.getValue());
-      }
-    }
-    return counts;
-  } 
+  
   
 }
