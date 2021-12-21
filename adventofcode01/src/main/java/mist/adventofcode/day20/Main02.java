@@ -56,25 +56,25 @@ public class Main02 {
   
   public static String stringAt(String[][] img, int x, int y, String inf){
     String s = "";
-      if(y-1 >= 0){
-        s += x-1 < 0 ? inf: img[y-1][x-1];
-        s += img[y-1][x];
-        s += x+1 >= img[y].length ? inf: img[y-1][x+1];
-      }else{
-        s+= inf+inf+inf;
-      }
-      s += x-1 < 0 ? inf: img[y][x-1];
-      s += img[y][x];
-      s += x+1 >= img[y].length ? inf: img[y][x+1];
+    if(y-1 >= 0){
+      s += x-1 < 0 ? inf: img[y-1][x-1];
+      s += img[y-1][x];
+      s += x+1 >= img[y].length ? inf: img[y-1][x+1];
+    }else{
+      s+= inf+inf+inf;
+    }
+    s += x-1 < 0 ? inf: img[y][x-1];
+    s += img[y][x];
+    s += x+1 >= img[y].length ? inf: img[y][x+1];
 
-      if(y+1 < img.length){
-        s += x-1 < 0 ? inf: img[y+1][x-1];
-        s += img[y+1][x];
-        s += x+1 >= img[y].length ? inf: img[y+1][x+1];
-      }else{
-        s+= inf+inf+inf;
-      }
-      return s;
+    if(y+1 < img.length){
+      s += x-1 < 0 ? inf: img[y+1][x-1];
+      s += img[y+1][x];
+      s += x+1 >= img[y].length ? inf: img[y+1][x+1];
+    }else{
+      s+= inf+inf+inf;
+    }
+    return s;
   }
   
   public static int toInt(String s){
