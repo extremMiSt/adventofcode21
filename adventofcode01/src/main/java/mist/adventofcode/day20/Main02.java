@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Main02 {
   
   public static void main(String[] args) throws IOException{
-    InputStream r = mist.adventofcode.day15.Main01.class.getClassLoader().getResourceAsStream("day20/input01.txt");
+    InputStream r = Main02.class.getClassLoader().getResourceAsStream("day20/input01.txt");
     Scanner scn = new Scanner(r);
     
     String[] pattern = scn.nextLine().split("");

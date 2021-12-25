@@ -16,7 +16,7 @@ public class Main01 {
   private static final Map<String, Integer> roomFor = Map.of("A", 0, "B", 1, "C", 2, "D", 3);
   
   public static void main(String[] args) throws IOException{
-    InputStream r = mist.adventofcode.day15.Main01.class.getClassLoader().getResourceAsStream("day23/input01.txt");
+    InputStream r = Main01.class.getClassLoader().getResourceAsStream("day23/input01.txt");
     Scanner scn = new Scanner(r);
     
     scn.nextLine();

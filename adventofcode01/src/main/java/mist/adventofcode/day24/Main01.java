@@ -10,11 +10,11 @@ import java.util.Scanner;
 public class Main01 {
   
   /*
-   *I honestly have no idea how to solve this..
+   * I honestly have no idea how to solve this..
    */
   
   public static void main(String[] args) throws IOException{
-    InputStream r = mist.adventofcode.day15.Main01.class.getClassLoader().getResourceAsStream("day24/input01.txt");
+    InputStream r = Main01.class.getClassLoader().getResourceAsStream("day24/input01.txt");
     Scanner scn = new Scanner(r);
     
     List<String[]> programm = new ArrayList<>();

@@ -3,10 +3,8 @@ package mist.adventofcode.day22;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import java.util.Set;
 
 public class Main02 {
   
@@ -14,7 +12,7 @@ public class Main02 {
   //2595373017598592
   
   public static void main(String[] args) throws IOException{
-    InputStream r = mist.adventofcode.day15.Main01.class.getClassLoader().getResourceAsStream("day22/input01.txt");
+    InputStream r = Main02.class.getClassLoader().getResourceAsStream("day22/input01.txt");
     Scanner scn = new Scanner(r);
     List<Step> steps = new ArrayList<>();
     
